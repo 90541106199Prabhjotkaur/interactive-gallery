@@ -1,6 +1,9 @@
 Name: - Prabhjot Kaur
+
 Student id: - 90541106199
+
 Topic: - Interactive Gallery
+
 
 Step 1 : -HTML CODE
 
