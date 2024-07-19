@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Gallery</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg'); /* Set background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      color: #FFD700; /* Change the color to bright yellow */
+      text-shadow: 2px 2px 4px #000000;
+      margin-bottom: 20px;
+      font-size: 3em;
+    }
+    
+    .thumbnail {
+      cursor: pointer;
+      width: 200px; /* Set a fixed width */
+      height: 150px; /* Set a fixed height */
+      margin: 10px;
+      border: 6px solid #ccc; /* Increase border size */
+      transition: transform 0.3s, border-color 0.3s;
+      object-fit: cover; /* Ensure images cover the area without distortion */
+    }
+    
+    .thumbnail:hover {
+      transform: scale(1.05);
+      border-color: #777; /* Change border color on hover */
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.5s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      animation: zoomIn 0.5s;
+    }
+    
+    @keyframes zoomIn {
+      from { transform: scale(0.7); }
+      to { transform: scale(1); }
+    }
+    
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Image Gallery</h1>
+    <img src="1.jpg" alt="Majestic Mountain Peaks - Embracing the serenity and grandeur of nature's heights." class="thumbnail" onclick="openModal(this)">
+    <img src="2.jpg" alt="Where the sky meets the earth, dreams touch the clouds." class="thumbnail" onclick="openModal(this)">
+    <img src="3.jpg" alt="Misty Forest Path - A tranquil journey through the ethereal beauty of nature." class="thumbnail" onclick="openModal(this)">
+    <img src="4.jpg" alt="Ancient Stone Bridge - Witnessing history amidst the lush green landscape." class="thumbnail" onclick="openModal(this)">
+    <img src="5.jpg" alt="Finding my way on a road that leads straight to the heart." class="thumbnail" onclick="openModal(this)">
+    <img src="20.jpg" alt="Nature’s symphony in a cascade of liquid grace." class="thumbnail" onclick="openModal(this)">
+    <img src="7.jpg" alt="Falling for the magic of nature’s own masterpiece." class="thumbnail" onclick="openModal(this)">
+    <img src="8.jpg" alt="Sun, sand, and sea—my perfect recipe for happiness." class="thumbnail" onclick="openModal(this)">
+    <img src="9.jpg" alt="Golden fields and summer dreams." class="thumbnail" onclick="openModal(this)">
+    <img src="1.jpg" alt="Crowned in white and kissed by the sun." class="thumbnail" onclick="openModal(this)">
+    <img src="11.jpg" alt="Sunsets are proof that no matter what happens, every day can end beautifully." class="thumbnail" onclick="openModal(this)">
+    <img src="12.jpg" alt="A cat’s love is the quietest, most soothing kind." class="thumbnail" onclick="openModal(this)">
+    <img src="13.jpg" alt="Where the trees wear their winter coats and magic fills the air." class="thumbnail" onclick="openModal(this)">
+    <img src="14.jpg" alt="Cutest little bundle of fur and fun." class="thumbnail" onclick="openModal(this)">
+    <img src="15.jpg" alt="Paws and whiskers, pure magic." class="thumbnail" onclick="openModal(this)">
+    <img src="16.jpg" alt="Where the green mountains meet the heart of the park." class="thumbnail" onclick="openModal(this)">
+    <img src="17.jpg" alt="Love is not just looking at each other, but looking in the same direction." class="thumbnail" onclick="openModal(this)">
+    <img src="18.jpg" alt="Where the mountains meet the sea, magic happens." class="thumbnail" onclick="openModal(this)">
+    <img src="19.jpg" alt="Let the water wash away your worries." class="thumbnail" onclick="openModal(this)">
+    <img src="20.jpg" alt="Where the earth meets the sky in a rush of pure beauty." class="thumbnail" onclick="openModal(this)">
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    function openModal(img) {
+      document.getElementById('myModal').style.display = "block";
+      document.getElementById('img01').src = img.src;
+      document.getElementById('caption').innerHTML = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
+  </script>
+</body>
+</html>
