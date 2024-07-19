@@ -14,7 +14,8 @@ Step 1 : -HTML CODE
 
 Step2: - CSS CODE
 
-![Screenshot (309)](https://github.com/user-attachments/assets/899bb4a3-eb09-4b70-a41e-f902db268776
+![Screenshot (309)](https://github.com/user-attachments/assets/bfc684e9-cb63-4ed2-9d01-077527af2cb4)
+
 
 ![Screenshot (310)](https://github.com/user-attachments/assets/87bde684-d0b4-4948-b9ee-0dda28284eb0)
 
